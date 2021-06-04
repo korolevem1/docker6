@@ -1,47 +1,95 @@
-мечта
-  отдел1
-    оля1
-      бухгалетр
-    оля2
-      бухгалетр
-    оля3
-      бухгалетр
-    оля4
-      бухгалетр
-    дмитрий1
-    дмитрий2
-    дмитрий3
-    иван1
-    иван1
-  отдел2
-    роман1
-      юрист
-    роман2
-      юрист
-    роман3
-      юрист
-    роман4
-      юрист
-    максим1
-      водитель
-    максим2
-      водитель
-  отдел3
-    оля1
-      юрист
-    иван1
-      строитель
-    николай1
-      строитель
-  отдел4  отдел5
-    юля1
-        >30
-    юля2
-        >30
-    юля3
-        >30
-    юля4
-        >30
-    юля5
-        >30
-  отдел6
+s---
+- CompanyName: Мечта
+
+  - department: Отдел1
+    - bigestpayment: ЗП1
+    - workers:
+      - worker: worker1 
+        name: Оля1
+        skill: Бухгалетр
+      - worker: worker2
+        name: Оля2
+        skill: Бухгалетр
+      - worker: worker3
+        name: Оля3
+        skill: Бухгалетр
+      - worker: worker4
+        name: Оля4
+        skill: Бухгалетр
+      - worker: worker5
+        name: Дмитрий1
+      - worker: worker6
+        name: Дмитрий2
+      - worker: worker7
+        name: Дмитрий3
+      - worker: worker8
+        name: Иван1
+      - worker: worker9
+        name: Иван1
+
+  - department: Отдел2
+    - common-adge: '<30'  
+    - bigestpayment: ЗП3
+    - workers:
+        worker: worker10
+        name: Роман1
+        skill: Юрист
+      - worker: worker11
+        name: Роман2
+        skill: Юрист
+      - worker: worker12
+        name: Роман3
+       skill: Юрист
+      - worker: worker13
+        name: Роман4
+        skill: Юрист
+      - worker: worker14
+     name: Максим1
+        skill: Водитель
+      - worker: worker15
+        name: Максим2
+        skill: Водитель
+
+  - department: Отдел3
+    - bigestpayment: ЗП3
+    - workers:
+      - worker: worker16
+        name: Оля1
+        skill: Юрист
+      - worker: worker17
+        name: Иван1
+        skill: Строитель
+    - worker: worker18
+        name: Николай1
+        skill: Строительs
+
+  - department: Отдел4-Отдел5
+    - bigestpayment: ЗП3
+    - workers:
+      - worker: worker19
+        name: Юля1
+        padge: '>30'
+      - worker: worker20
+        name: Юля2
+        padge: '>30'
+      - worker: worker21
+        name: Юля3
+        padge: '>30'
+      - worker: worker22
+        name: Юля4
+        padge: '>30'
+      - worker: worker23
+        name: Юля5
+        padge: '>30'
+
+  - department: Отдел 5 
+    - common-adge-mens: '>65'  
+    - bigestpaument: ЗП2
+    
+  - department: Отдел6
+    - bigestpayment: ЗП3
+    - workers: 
+      - worker: worker24
+        name: Игорь Викторович
+        padge: '>>50'
+---
