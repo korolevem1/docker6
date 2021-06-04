@@ -25,7 +25,8 @@ s---
       - worker: worker8
         name: Иван1
       - worker: worker9
-        name: Иван1
+        name: Иван2
+      - worker: some-worker
 
   - department: Отдел2
     - common-adge: '<30'  
@@ -44,7 +45,7 @@ s---
         name: Роман4
         skill: Юрист
       - worker: worker14
-     name: Максим1
+        name: Максим1
         skill: Водитель
       - worker: worker15
         name: Максим2
@@ -68,23 +69,28 @@ s---
     - workers:
       - worker: worker19
         name: Юля1
+        skill: work-with-papper
         padge: '>30'
       - worker: worker20
         name: Юля2
+        skill: work-with-papper
         padge: '>30'
       - worker: worker21
         name: Юля3
+        skill: work-with-papper
         padge: '>30'
       - worker: worker22
         name: Юля4
+        skill: work-with-papper
         padge: '>30'
       - worker: worker23
         name: Юля5
+        skill: work-with-papper
         padge: '>30'
 
   - department: Отдел 5 
     - common-adge-mens: '>65'  
-    - bigestpaument: ЗП2
+    - bigestpyument: ЗП2
     
   - department: Отдел6
     - bigestpayment: ЗП3
