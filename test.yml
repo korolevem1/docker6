@@ -1,38 +1,50 @@
-s---
-- CompanyName: Мечта
+  zp:
+    1m
+  workers:
+    worker1:  
+      - name: Оля1
+      - skill: Бухгалетр
+    worker2:  
+      - name: Оля2
+      - skill: Бухгалетр2
 
-  - department: Отдел1
-    - bigestpayment: ЗП1
-    - workers:
-      - worker: worker1 
-        name: Оля1
-        skill: Бухгалетр
-      - worker: worker2
-        name: Оля2
-        skill: Бухгалетр
-      - worker: worker3
-        name: Оля3
-        skill: Бухгалетр
-      - worker: worker4
-        name: Оля4
-        skill: Бухгалетр
-      - worker: worker5
-        name: Дмитрий1
-      - worker: worker6
-        name: Дмитрий2
-      - worker: worker7
-        name: Дмитрий3
-      - worker: worker8
-        name: Иван1
-      - worker: worker9
-        name: Иван2
-      - worker: some-worker
 
-  - department: Отдел2
+
+
+---
+
+  department: Отдел1
+    bigestpayment: ЗП1
+    workers:
+      worker1:  
+        - name: Оля1
+        - skill: Бухгалетр
+      worker2: 
+        - name: Оля2
+        - skill: Бухгалетр
+      worker3: 
+        - name: Оля3
+        - skill: Бухгалетр
+      worker4: 
+        - name: Оля4
+        - skill: Бухгалетр
+      worker5: 
+        - name: Дмитрий1
+      worker6: 
+        - name: Дмитрий2
+      worker7: 
+         -name: Дмитрий3
+      worker8: 
+         - name: Иван1
+      worker9: 
+         - name: Иван2
+      workersome1department: 
+
+  department: Отдел2
     - common-adge: '<30'  
     - bigestpayment: ЗП3
     - workers:
-        worker: worker10
+      worker: worker10
         name: Роман1
         skill: Юрист
       - worker: worker11
@@ -51,7 +63,7 @@ s---
         name: Максим2
         skill: Водитель
 
-  - department: Отдел3
+  department: Отдел3
     - bigestpayment: ЗП3
     - workers:
       - worker: worker16
@@ -64,7 +76,7 @@ s---
         name: Николай1
         skill: Строительs
 
-  - department: Отдел4-Отдел5
+  department: Отдел4-Отдел5
     - bigestpayment: ЗП3
     - workers:
       - worker: worker19
@@ -88,11 +100,11 @@ s---
         skill: work-with-papper
         padge: '>30'
 
-  - department: Отдел 5 
+  department: Отдел 5 
     - common-adge-mens: '>65'  
     - bigestpyument: ЗП2
     
-  - department: Отдел6
+  department: Отдел6
     - bigestpayment: ЗП3
     - workers: 
       - worker: worker24
