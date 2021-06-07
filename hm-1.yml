@@ -58,6 +58,6 @@
     ansible.builtin.shell: 
      args:
        chdir: /home/
-       cmd: git clone https://github.com/tarekkhoury/mywebapplication.git
+       #cmd: git clone https://github.com/tarekkhoury/mywebapplication.git
        #cmd: cd /home/mywebapplication/
        #cmd: mvn package
