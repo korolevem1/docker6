@@ -1,43 +1,41 @@
----
 - name : install-default-jdk and maven and git
-  hosts: builder 
+  hosts: builder
   become: yes
 
   tasks:
   - name: Ensure that default-jdk and maven and git package is present
     apt:
-      pkg: 
-        - default-jdk 
-        - maven 
+      pkg:
+        - default-jdk
+        - maven
         - git
-     
+
 - name : install-default-jdk-prod  and tomcat9
-  hosts: prod 
+  hosts: prod
   become: yes
 
   tasks:
   - name: Ensure that default-jdk and tomcat9 package is present in pod
     apt:
-      pkg: 
-        - default-jdk 
+      pkg:
+        - default-jdk
         - tomcat9
-     
+
 - name : change-work-dir-in-builder
-  hosts: builder 
+  hosts: builder
   become: yes
 
-  tasks: 
+  tasks:
   - name: Ensure that work dir is present in builder
-    shell: 
-    args:
-      chdir: /home
+    shell:
+     cmd: mkdir /home/mywebapplication
 
-- name : get-git-repository 
-  hosts: builder 
+- name : get-git-repository
+  hosts: builder
   become: yes
 
-  tasks: 
+  tasks:
   - name: Ensure  that  install git project
-    git: 
+    git:
       repo: 'https://github.com/tarekkhoury/mywebapplication.git'
-      dest: /home
+      dest: /home/mywebapplication
