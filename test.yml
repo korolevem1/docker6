@@ -1,113 +1,103 @@
-  zp:
-    1m
+# check in https://yamlvalidator.com/, https://yamlchecker.com/, https://codebeautify.org/yaml-validator 
+
+---
+
+otdel1:
+  bigestpayment: ЗП1
   workers:
     worker1:  
       - name: Оля1
       - skill: Бухгалетр
-    worker2:  
+    worker2: 
       - name: Оля2
-      - skill: Бухгалетр2
+      - skill: Бухгалетр
+    worker3: 
+      - name: Оля3
+      - skill: Бухгалетр
+    worker4: 
+      - name: Оля4
+      - skill: Бухгалетр
+    worker5: 
+      - name: Дмитрий1
+    worker6: 
+      - name: Дмитрий2
+    worker7: 
+      - name: Дмитрий3
+    worker8: 
+      - name: Иван1
+    worker9: 
+      - name: Иван2
 
+workersome1department:
+  n/a
 
+otdel12:
+  common-adge: <30  
+  bigestpayment: ЗП3
+  workers:
+    worker10:
+      - name: Роман1
+      - skill: Юрист
+    worker11:
+      - name: Роман2
+      - skill: Юрист
+    worker12:
+      - name: Роман3
+      - skill: Юрист
+    worker13:
+      - name: Роман4
+      - skill: Юрист
+    worker14:
+      - name: Максим1
+      - skill: Водитель
+    worker15:
+      - name: Максим2
+      - skill: Водитель
 
+otel3:
+  bigestpayment: ЗП3
+  workers:
+    worker16:
+      - name: Оля1
+      - skill: Юрист
+    worker17:
+      - name: Иван1
+      - skill: Строитель
+    worker18:
+      - name: Николай1
+      - skill: Строитель
 
----
-
-  department: Отдел1
-    bigestpayment: ЗП1
-    workers:
-      worker1:  
-        - name: Оля1
-        - skill: Бухгалетр
-      worker2: 
-        - name: Оля2
-        - skill: Бухгалетр
-      worker3: 
-        - name: Оля3
-        - skill: Бухгалетр
-      worker4: 
-        - name: Оля4
-        - skill: Бухгалетр
-      worker5: 
-        - name: Дмитрий1
-      worker6: 
-        - name: Дмитрий2
-      worker7: 
-         -name: Дмитрий3
-      worker8: 
-         - name: Иван1
-      worker9: 
-         - name: Иван2
-      workersome1department: 
-
-  department: Отдел2
-    - common-adge: '<30'  
-    - bigestpayment: ЗП3
-    - workers:
-      worker: worker10
-        name: Роман1
-        skill: Юрист
-      - worker: worker11
-        name: Роман2
-        skill: Юрист
-      - worker: worker12
-        name: Роман3
-       skill: Юрист
-      - worker: worker13
-        name: Роман4
-        skill: Юрист
-      - worker: worker14
-        name: Максим1
-        skill: Водитель
-      - worker: worker15
-        name: Максим2
-        skill: Водитель
-
-  department: Отдел3
-    - bigestpayment: ЗП3
-    - workers:
-      - worker: worker16
-        name: Оля1
-        skill: Юрист
-      - worker: worker17
-        name: Иван1
-        skill: Строитель
-    - worker: worker18
-        name: Николай1
-        skill: Строительs
-
-  department: Отдел4-Отдел5
-    - bigestpayment: ЗП3
-    - workers:
-      - worker: worker19
+otdel4-5:
+  bigestpayment: ЗП3
+  workers:
+    worker19:
         name: Юля1
         skill: work-with-papper
         padge: '>30'
-      - worker: worker20
+    worker20:
         name: Юля2
         skill: work-with-papper
         padge: '>30'
-      - worker: worker21
+    worker21:
         name: Юля3
         skill: work-with-papper
         padge: '>30'
-      - worker: worker22
+    worker22:
         name: Юля4
         skill: work-with-papper
         padge: '>30'
-      - worker: worker23
+    worker23:
         name: Юля5
         skill: work-with-papper
         padge: '>30'
 
-  department: Отдел 5 
-    - common-adge-mens: '>65'  
-    - bigestpyument: ЗП2
-    
-  department: Отдел6
-    - bigestpayment: ЗП3
-    - workers: 
-      - worker: worker24
+otdel5: 
+  common-adge-mens: '>65'  
+  bigestpyument: ЗП2
+  
+otel6:
+  bigestpayment: ЗП3
+  workers: 
+    worker24:
         name: Игорь Викторович
         padge: '>>50'
----
