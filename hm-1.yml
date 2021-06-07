@@ -48,3 +48,16 @@
     apt:
      name: tomcat9
      state: present
+
+- name : create-work-dir-in-builder
+  hosts: builder 
+  become: yes
+
+  tasks:
+  - name: ensure  that  work dir is present in builder
+    ansible.builtin.shell: 
+     args:
+       chdir: /home/
+       cmd: git clone https://github.com/tarekkhoury/mywebapplication.git
+       chdir: /home/mywebapplication
+       cmd: mvn package
