@@ -59,3 +59,19 @@
   - name: make war
     shell:
       cmd:  mvn -f /home/mywebapplication/pom.xml clean package
+
+- name : copy file from builder to web
+  hosts: builder
+  become: yes
+
+  tasks:
+  - name: copy file
+    # shell:
+    #  cmd: scp root@10.128.0.15:/home/mywebapplication/target/mywebapplication.war root@10.128.0.16:/var/lib/tomcat9/webapps/
+
+     synchronize: 
+      src: /home/mywebapplication/target/mywebapplication.war 
+      dest: /var/lib/tomcat9/webapps/
+      mode: pull
+    delegate_to: prod
+
