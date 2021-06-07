@@ -1,4 +1,3 @@
-
 - name : install-default-jdk and maven and git
   hosts: builder
   become: yes
@@ -22,15 +21,19 @@
         - default-jdk
         - tomcat9
 
-- name : prepare project directory for work 
+- name : change-work-dir-in-builder
   hosts: builder
   become: yes
 
+
+
   tasks:
-  - name:  remove folder mywebapplication 
+  - name: Ensure that work dir is present in builder
     file:
       path: /home/mywebapplication
       state: absent
+      #    shell:
+      # cmd: mkdir /home/mywebapplication
 
 - name : get-git-repository
   hosts: builder
@@ -41,3 +44,13 @@
     git:
       repo: 'https://github.com/tarekkhoury/mywebapplication.git'
       dest: /home/mywebapplication
+
+
+- name : make  war file
+  hosts: builder
+  become: yes
+
+  tasks:
+  - name: make war
+    shell:
+      cmd:  mvn -f /home/mywebapplication/pom.xml clean package
