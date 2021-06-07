@@ -1,35 +1,10 @@
 ---
-- name : install nginx
-  hosts: web
+- name : install-default-jdk
+  hosts: builder 
   become: yes
 
   tasks:
-  - name: Ensure nginx package is present
+  - name: Ensure that default-jdk package is present
     apt:
-     name: nginx
+     name: default-jdk
      state: present
-
-  - name: Ensure index.html is present
-    copy:
-     src: index.html
-     dest: /var/www/html
-
-  - name: Ensure nginx service is started
-    service:
-     name: nginx  
-     state: started
-
-- name: install db
-  hosts: db
-  become: yes
-
-  tasks:
-  - name: Ensure postgresql package is present
-    apt:
-     name: postgresql
-     state: present
-
-  - name: Ensure postgresql service is started
-    service:
-     name: postgresql
-     state: started
