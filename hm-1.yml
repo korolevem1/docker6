@@ -29,8 +29,8 @@
   tasks: 
   - name: Ensure that work dir is present in builder
     shell: 
-      args:
-        chdir: /home
+    args:
+      chdir: /home
 
 - name : get-git-repository 
   hosts: builder 
