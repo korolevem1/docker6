@@ -1,63 +1,40 @@
 ---
-- name : install-default-jdk
+- name : install-default-jdk and maven and git
   hosts: builder 
   become: yes
 
   tasks:
-  - name: Ensure that default-jdk package is present
+  - name: Ensure that default-jdk and maven and git package is present
     apt:
-     name: default-jdk
+     name: default-jdk maven git
      state: present
 
-- name : install-maven
-  hosts: builder 
-  become: yes
-
-  tasks:
-  - name: Ensure that maven package is present
-    apt:
-     name: maven
-     state: present
-
-- name : install-git
-  hosts: builder 
-  become: yes
-
-  tasks:
-  - name: Ensure that git package is present
-    apt:
-     name: git
-     state: present
-
-- name : install-default-jdk-prod
+- name : install-default-jdk-prod  and tomcat9
   hosts: prod 
   become: yes
 
   tasks:
-  - name: Ensure that default-jdk package is present in pod
+  - name: Ensure that default-jdk and tomcat9 package is present in pod
     apt:
-     name: default-jdk
+     name: default-jdk tomcat9
      state: present
 
-- name : install-tomcat9-prod
-  hosts: prod
-  become: yes
-
-  tasks:
-  - name: Ensure that tomcat9 package is present in prod
-    apt:
-     name: tomcat9
-     state: present
-
-- name : create-work-dir-in-builder
+- name : change-work-dir-in-builder
   hosts: builder 
   become: yes
 
-  tasks:
-  - name: ensure  that  work dir is present in builder
-    ansible.builtin.shell: 
-     args:
-       chdir: /home/
-       #cmd: git clone https://github.com/tarekkhoury/mywebapplication.git
-       #cmd: cd /home/mywebapplication/
-       #cmd: mvn package
+  tasks: 
+  - name: Ensure that work dir is present in builder
+    shell: 
+      args:
+        chdir: /home/
+
+- name : get-git-repository 
+  hosts: builder 
+  become: yes
+
+  tasks: 
+  - name: Ensure  that  install git project
+    git: 
+      repo: 'https://github.com/tarekkhoury/mywebapplication.git'
+      dest: /home
