@@ -1,3 +1,4 @@
+
 - name : install-default-jdk and maven and git
   hosts: builder
   become: yes
@@ -21,14 +22,15 @@
         - default-jdk
         - tomcat9
 
-- name : change-work-dir-in-builder
+- name : prepare project directory for work 
   hosts: builder
   become: yes
 
   tasks:
-  - name: Ensure that work dir is present in builder
-    shell:
-     cmd: mkdir /home/mywebapplication
+  - name:  remove folder mywebapplication 
+    file:
+      path: /home/mywebapplication
+      state: absent
 
 - name : get-git-repository
   hosts: builder
