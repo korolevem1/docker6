@@ -20,7 +20,7 @@
      state: present
 
 - name : install-git
-  hosts:  
+  hosts: builder 
   become: yes
 
   tasks:
@@ -28,4 +28,3 @@
     apt:
      name: git
      state: present
-     
