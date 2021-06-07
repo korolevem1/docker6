@@ -8,3 +8,24 @@
     apt:
      name: default-jdk
      state: present
+
+- name : install-maven
+  hosts: builder 
+  become: yes
+
+  tasks:
+  - name: Ensure that maven package is present
+    apt:
+     name: maven
+     state: present
+
+- name : install-git
+  hosts:  
+  become: yes
+
+  tasks:
+  - name: Ensure that git package is present
+    apt:
+     name: git
+     state: present
+     
