@@ -6,9 +6,11 @@
   tasks:
   - name: Ensure that default-jdk and maven and git package is present
     apt:
-     name: default-jdk maven git
-     state: present
-
+      pkg: 
+        - default-jdk 
+        - maven 
+        - git
+     
 - name : install-default-jdk-prod  and tomcat9
   hosts: prod 
   become: yes
@@ -16,9 +18,10 @@
   tasks:
   - name: Ensure that default-jdk and tomcat9 package is present in pod
     apt:
-     name: default-jdk tomcat9
-     state: present
-
+      pkg: 
+        - default-jdk 
+        - tomcat9
+     
 - name : change-work-dir-in-builder
   hosts: builder 
   become: yes
@@ -27,7 +30,7 @@
   - name: Ensure that work dir is present in builder
     shell: 
       args:
-        chdir: /home/
+        chdir: /home
 
 - name : get-git-repository 
   hosts: builder 
