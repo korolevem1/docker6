@@ -28,3 +28,23 @@
     apt:
      name: git
      state: present
+
+- name : install-default-jdk-prod
+  hosts: prod 
+  become: yes
+
+  tasks:
+  - name: Ensure that default-jdk package is present in pod
+    apt:
+     name: default-jdk
+     state: present
+
+- name : install-tomcat9-prod
+  hosts: prod
+  become: yes
+
+  tasks:
+  - name: Ensure that tomcat9 package is present in prod
+    apt:
+     name: tomcat9
+     state: present
